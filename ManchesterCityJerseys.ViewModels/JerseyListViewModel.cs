@@ -9,7 +9,6 @@ namespace ManchesterCityJerseys.ViewModels
     public partial class JerseyListViewModel : BaseViewModel
     {
         private readonly IJerseyService _jerseyService;
-        private readonly IDeviceInfoService _deviceInfoService;
         private readonly INavigationService _navigationService;
 
         public ObservableCollection<JerseyItemViewModel> Jerseys { get; } = new();
@@ -17,10 +16,9 @@ namespace ManchesterCityJerseys.ViewModels
         [ObservableProperty]
         private bool isRefreshing;
 
-        public JerseyListViewModel(IJerseyService jerseyService, IDeviceInfoService deviceInfoService, INavigationService navigationService)
+        public JerseyListViewModel(IJerseyService jerseyService, INavigationService navigationService)
         {
             _jerseyService = jerseyService ?? throw new ArgumentNullException(nameof(jerseyService));
-            _deviceInfoService = deviceInfoService ?? throw new ArgumentNullException(nameof(deviceInfoService));
             _navigationService = navigationService ?? throw new ArgumentNullException(nameof(navigationService));
 
             LoadJerseysCommand = new AsyncRelayCommand(LoadJerseysAsync);

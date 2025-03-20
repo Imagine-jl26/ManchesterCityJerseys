@@ -22,24 +22,21 @@ namespace ManchesterCityJerseys.ViewModels.Tests
 
             _viewModel = new JerseyListViewModel(
                 _jerseyServiceMock.Object,
-                _deviceInfoServiceMock.Object,
                 _navigationServiceMock.Object);
         }
 
         [Theory]
-        [InlineData(null, "deviceInfoService", "navigationService", "jerseyService")]
-        [InlineData("jerseyService", null, "navigationService", "deviceInfoService")]
-        [InlineData("jerseyService", "deviceInfoService", null, "navigationService")]
+        [InlineData(null, "navigationService", "jerseyService")]
+        [InlineData("jerseyService", null, "navigationService")]
         public void Constructor_ShouldThrowArgumentNullException_WhenAnyDependencyIsNull(
-            string jerseyService, string deviceInfoService, string navigationService, string expectedParam)
+            string jerseyService, string navigationService, string expectedParam)
         {
             // Arrange
             var jerseyServiceInstance = jerseyService == null ? null : _jerseyServiceMock.Object;
-            var deviceInfoServiceInstance = deviceInfoService == null ? null : _deviceInfoServiceMock.Object;
             var navigationServiceInstance = navigationService == null ? null : _navigationServiceMock.Object;
 
             // Act
-            Action act = () => new JerseyListViewModel(jerseyServiceInstance, deviceInfoServiceInstance, navigationServiceInstance);
+            Action act = () => new JerseyListViewModel(jerseyServiceInstance, navigationServiceInstance);
 
             // Assert
             act.Should().Throw<ArgumentNullException>()
