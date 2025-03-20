@@ -1,0 +1,52 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ManchesterCityJerseysApp.Views.DeviceInfoPage"
+             Title="Device Info">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Frame Padding="15" CornerRadius="10" BackgroundColor="LightGray">
+                <Grid RowSpacing="12" ColumnSpacing="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Model:" FontSize="18" FontAttributes="Bold" Grid.Row="0"/>
+                    <Label Text="{Binding DeviceModel}" FontSize="18" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Manufacturer:" FontSize="18" FontAttributes="Bold" Grid.Row="1"/>
+                    <Label Text="{Binding Manufacturer}" FontSize="18" Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="OS Version:" FontSize="18" FontAttributes="Bold" Grid.Row="2"/>
+                    <Label Text="{Binding OsVersion}" FontSize="18" Grid.Row="2" Grid.Column="1"/>
+
+                    <Label Text="Platform:" FontSize="18" FontAttributes="Bold" Grid.Row="3"/>
+                    <Label Text="{Binding Platform}" FontSize="18" Grid.Row="3" Grid.Column="1"/>
+
+                    <Label Text="App Version:" FontSize="18" FontAttributes="Bold" Grid.Row="4"/>
+                    <Label Text="{Binding AppVersion}" FontSize="18" Grid.Row="4" Grid.Column="1"/>
+
+                    <Label Text="Device Name:" FontSize="18" FontAttributes="Bold" Grid.Row="5"/>
+                    <Label Text="{Binding DeviceName}" FontSize="18" Grid.Row="5" Grid.Column="1"/>
+
+                    <Label Text="Screen Resolution:" FontSize="18" FontAttributes="Bold" Grid.Row="6"/>
+                    <Label Text="{Binding ScreenResolution}" FontSize="18" Grid.Row="6" Grid.Column="1"/>
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

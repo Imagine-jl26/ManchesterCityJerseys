@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="ManchesterCityJerseysApp.Views.JerseyListPage">
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, Auto, *" Padding="10">
+
+            <Button 
+                Text="Device Info" 
+                Grid.Row="0" 
+                Command="{Binding NavigateToDeviceInfoCommand}" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Start" 
+                Padding="10" 
+                Margin="0 0 10 0"/>
+
+            <ActivityIndicator Grid.Row="1" IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" />
+
+            <CollectionView Grid.Row="2" ItemsSource="{Binding Errors}" IsVisible="{Binding Errors.Count, Converter={toolkit:IntToBoolConverter}}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" TextColor="Red"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <RefreshView Grid.Row="2" Command="{Binding LoadJerseysCommand}" IsRefreshing="{Binding IsRefreshing}">
+                <CollectionView ItemsSource="{Binding Jerseys}" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" Margin="5" BackgroundColor="LightGray">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectCommand}" />
+                                </Frame.GestureRecognizers>
+
+                                <VerticalStackLayout>
+                                    <Image Source="{Binding Item.ImageUrl}" HeightRequest="150" Aspect="AspectFill"/>
+                                    <Label Text="{Binding Item.Name}" FontSize="20" FontAttributes="Bold" />
+                                    <Label Text="{Binding Item.Year}" FontSize="16" />
+                                    <Label Text="{Binding Item.Price, StringFormat='Price: {0:C}'}" FontSize="16" TextColor="Green"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

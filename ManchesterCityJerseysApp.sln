@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManchesterCityJerseysApp", "ManchesterCityJerseysApp\ManchesterCityJerseysApp.csproj", "{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManchesterCityJerseys.Core", "ManchesterCityJerseys.Core\ManchesterCityJerseys.Core.csproj", "{0594B2A8-1488-6759-BC83-B142190971F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManchesterCityJerseys.ViewModels", "ManchesterCityJerseys.ViewModels\ManchesterCityJerseys.ViewModels.csproj", "{F6C900B0-09AA-4DAE-BF42-431916949E43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManchesterCityJerseys.Services", "ManchesterCityJerseys.Services\ManchesterCityJerseys.Services.csproj", "{E681910E-8939-42B3-8ACE-C5078D20D528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManchesterCityJerseys.ViewModels.Tests", "ManchesterCityJerseys.ViewModels.Tests\ManchesterCityJerseys.ViewModels.Tests.csproj", "{669F7D2F-66C0-4D34-8513-3CBC4389AA44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF0FBE0-9312-43E5-B0EC-C7B7425142AF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0594B2A8-1488-6759-BC83-B142190971F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0594B2A8-1488-6759-BC83-B142190971F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0594B2A8-1488-6759-BC83-B142190971F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0594B2A8-1488-6759-BC83-B142190971F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C900B0-09AA-4DAE-BF42-431916949E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C900B0-09AA-4DAE-BF42-431916949E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C900B0-09AA-4DAE-BF42-431916949E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C900B0-09AA-4DAE-BF42-431916949E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E681910E-8939-42B3-8ACE-C5078D20D528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E681910E-8939-42B3-8ACE-C5078D20D528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E681910E-8939-42B3-8ACE-C5078D20D528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E681910E-8939-42B3-8ACE-C5078D20D528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{669F7D2F-66C0-4D34-8513-3CBC4389AA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{669F7D2F-66C0-4D34-8513-3CBC4389AA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{669F7D2F-66C0-4D34-8513-3CBC4389AA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{669F7D2F-66C0-4D34-8513-3CBC4389AA44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13892AC1-522D-407C-BD28-2EB764370B10}
+	EndGlobalSection
+EndGlobal
